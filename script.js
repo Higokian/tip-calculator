@@ -1,7 +1,6 @@
-// TODO: Select all necessary DOM elements using destructuring
-// Hint: Get billAmount, tipPercentage, numPeople, calculateBtn, results div, and result spans
+const getElement = (id) => document.getElementById(id); // Helper function to get DOM elements by ID
 
-const getElement = (id) => document.getElementById(id);
+// Get references to DOM elements
 const elements = {
   billAmount: getElement("billAmount"),
   tipPercentage: getElement("tipPercentage"),
@@ -13,6 +12,7 @@ const elements = {
   perPersonSpan: getElement("perPerson"),
 };
 
+// Destructure elements for easier access
 const {
   billAmount,
   tipPercentage,
@@ -24,49 +24,53 @@ const {
   perPersonSpan,
 } = elements;
 
-// TODO: Create a config object with calculation functions
-// Include: calculateTip, calculateTotal, calculatePerPerson
-// Use arrow functions and spread/rest where appropriate
-
+// Calculator object with methods for each calculation step
 const calculator = {
   calculateTip: (bill, tipPercent) => (bill * tipPercent) / 100,
   calculateTotal: (bill, tip) => bill + tip,
   calculatePerPerson: (total, people) => total / people,
 
+  // Method to perform all calculations at once using spread operator
+  // ...value
   calculateAll: (...values) => {
     const [bill, tipPercent, people] = values;
     const tip = calculator.calculateTip(bill, tipPercent);
     const total = calculator.calculateTotal(bill, tip);
     const perPerson = calculator.calculatePerPerson(total, people);
-    return [ tip, total, perPerson ];
+    return [tip, total, perPerson];
   },
 };
 
-// TODO: Create a calculate function that:
-// 1. Gets input values (use destructuring!)
-// 2. Validates inputs
-// 3. Performs calculations using spread operator for function arguments
-// 4. Displays results
 const calculate = () => {
+  // Get input values using destructuring
   const values = {
     bill: Number.parseFloat(billAmount.value),
     tipPercent: Number.parseFloat(tipPercentage.value),
     people: Number.parseFloat(numPeople.value),
   };
-
   const { bill, tipPercent, people } = values;
 
-  if (Number.isNaN(bill) ||Number.isNaN(tipPercent) || Number.isNaN(people) || bill <= 0 || tipPercent < 0 || people <= 0) {
+  // Input validation
+  if (
+    Number.isNaN(bill) ||
+    Number.isNaN(tipPercent) ||
+    Number.isNaN(people) ||
+    bill <= 0 ||
+    tipPercent < 0 ||
+    people <= 0
+  ) {
     alert("Please enter valid positive numbers");
   }
 
+  // Perform calculations using spread operator
   const results = calculator.calculateAll(...Object.values(values));
-  const [ tip, total, perPerson ] = results;
+  const [tip, total, perPerson] = results;
   console.log(results);
 
-  tipAmountSpan.textContent = tip.toFixed(2);
-  totalBillSpan.textContent = total.toFixed(2);
-  perPersonSpan.textContent = perPerson.toFixed(2);
+  // Display results
+  tipAmountSpan.textContent = `$${tip.toFixed(2)}`;
+  totalBillSpan.textContent = `$${total.toFixed(2)}`;
+  perPersonSpan.textContent = `$${perPerson.toFixed(2)}`;
 };
 
 // TODO: Add event listener to calculate button
