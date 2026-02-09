@@ -11,6 +11,7 @@ Never waste time trying to figure out how much to tip again!
 
 **[Live Demo](https://yourusername.github.io/project-name)** | **[Video Walkthrough](link-if-available)**
 -->
+
 ---
 
 ## 📖 About The Project
@@ -21,16 +22,16 @@ A convenient tip calculator app that helps users determine how much they should 
 
 ## ✨ Features
 
-- **Calculate Tip Amount**: Calculate the amount to tip based on tip percentage 
+- **Calculate Tip Amount**: Calculate the amount to tip based on tip percentage
 - **Calculate Total Bill**: Calculate the total bill including the tip amount
 - **Calculate Amount Per Person**: Easily determine how much each person should pay
-
 
 ---
 
 ## 🛠️ Built With
 
 ### Core Technologies
+
 - HTML5
 - CSS3
 - JavaScript (ES6+)
@@ -43,6 +44,7 @@ A convenient tip calculator app that helps users determine how much they should 
 -->
 
 ### JavaScript Concepts Demonstrated
+
 - Object and array destructuring
 - Spread/rest operators
 - Arrow functions
@@ -61,6 +63,7 @@ A convenient tip calculator app that helps users determine how much they should 
 ### Prerequisites
 
 What users need before they can run your project:
+
 - Modern web browser (Chrome, Firefox, Safari, Edge)
 
 <!--
@@ -91,10 +94,10 @@ What users need before they can run your project:
 
 ### Usage
 
- 1. Enter the amount of your bill
- 2. Enter the percentage of tip you would like to add
- 3. Enter the number of people splitting the bill
- 4. Click/tap Calculate
+1.  Enter the amount of your bill
+2.  Enter the percentage of tip you would like to add
+3.  Enter the number of people splitting the bill
+4.  Click/tap Calculate
 
 ---
 
@@ -104,7 +107,8 @@ Building this project taught me:
 
 - **Destructuring**: How to work with destructuring for clean, efficient code.
 - **Spread/Rest Operators**: Writing cleaner code by avoiding writing several lines
- <!--
+<!--
+
 ### Challenges Overcome
 
 - **Challenge**: API rate limiting was causing errors with rapid searches
@@ -113,8 +117,7 @@ Building this project taught me:
 - **Challenge**: Pagination was confusing with filtering active
   - **Solution**: Reset to page 1 when filters change and clearly indicate active filters
 
--->
----
+## -->
 
 ## 🔮 Future Improvements
 
@@ -123,6 +126,7 @@ Building this project taught me:
 - [ ] Save to localStorage
 
 ---
+
 <!--
 ## 📸 Screenshots
 
@@ -203,17 +207,17 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 👨‍💻 Author
 
-**Your Name**
+**Jason Ritter**
 
-Full-stack developer in training | Week [X] of 12-week intensive bootcamp
+Full-stack developer in training | Week [1] of 12-week intensive bootcamp
 
-- **GitHub**: [@yourusername](https://github.com/yourusername)
-- **LinkedIn**: [Your Name](https://linkedin.com/in/yourname)
-- **Portfolio**: [yourportfolio.com](https://yourportfolio.com)
-- **Email**: your.email@example.com
+- **GitHub**: [@higokian](https://github.com/higokian)
+- **LinkedIn**: [Jason Ritter](https://linkedin.com/in/jason-ritter-891b36145)
+- **Email**: higokian0817@gmail.com
 
 ---
 
+<!--
 ## 🙏 Acknowledgments
 
 - [Resource/Tutorial that helped] - Brief note on how it helped
@@ -227,17 +231,19 @@ Example:
 - [JavaScript.info](https://javascript.info/) - In-depth ES6 documentation
 - My learning journey at [your bootcamp/course name]
 
----
+--- -->
 
 ## 📊 Project Stats
 
-- **Start Date**: [Date you started]
-- **Completion Date**: [Date you finished]
-- **Time Invested**: ~[X hours]
-- **Lines of Code**: ~[X lines] (optional)
-- **Commits**: [X commits] (optional)
+- **Start Date**: [2/8/2026]
+- **Completion Date**: [2/9/2026]
+- **Time Invested**: ~[6 hours]
+- **Lines of Code**: ~[276 lines]
+- **Commits**: [12 commits]
 
 ---
+
+<!-->
 
 ## 🐛 Known Issues
 
@@ -245,11 +251,14 @@ Example:
 - [Issue 2 and potential workaround]
 
 Example:
+
 - API occasionally returns duplicate results - working on deduplication logic
 - Modal doesn't close with Escape key on some browsers - browser compatibility issue
+  -->
 
 ---
 
+<!--
 ## 📞 Support
 
 If you have any questions or run into issues:
@@ -258,11 +267,11 @@ If you have any questions or run into issues:
 - **Email me**: your.email@example.com
 - **Connect on LinkedIn**: [Your LinkedIn]
 
----
+--- -->
 
 <div align="center">
 
-**[⬆ Back to Top](#project-name)**
+**[⬆ Back to Top](#tip-calculator)**
 
 Made with ❤️ and lots of ☕ during my full-stack development journey
 
@@ -272,6 +281,7 @@ Made with ❤️ and lots of ☕ during my full-stack development journey
 
 ---
 
+<!--
 ## 📚 Additional Resources
 
 Links to related documentation, tutorials, or articles that might help others:
@@ -291,4 +301,3 @@ Links to related documentation, tutorials, or articles that might help others:
 ![GitHub last commit](https://img.shields.io/github/last-commit/yourusername/project-name)
 ![GitHub issues](https://img.shields.io/github/issues/yourusername/project-name)
 -->
-
