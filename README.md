@@ -243,7 +243,7 @@ Example:
 
 ---
 
-<!-->
+<!--
 
 ## 🐛 Known Issues
 
