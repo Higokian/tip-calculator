@@ -35,9 +35,9 @@ const calculator = {
 
   calculateAll: (...values) => {
     const [bill, tipPercent, people] = values;
-    const tip = config.calculateTip(bill, tipPercent);
-    const total = config.calculateTotal(bill, tip);
-    const perPerson = config.calculatePerPerson(total, people);
+    const tip = calculator.calculateTip(bill, tipPercent);
+    const total = calculator.calculateTotal(bill, tip);
+    const perPerson = calculator.calculatePerPerson(total, people);
     return { tip, total, perPerson };
   },
 };
