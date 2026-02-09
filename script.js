@@ -38,7 +38,7 @@ const calculator = {
     const tip = calculator.calculateTip(bill, tipPercent);
     const total = calculator.calculateTotal(bill, tip);
     const perPerson = calculator.calculatePerPerson(total, people);
-    return { tip, total, perPerson };
+    return [ tip, total, perPerson ];
   },
 };
 
@@ -47,8 +47,30 @@ const calculator = {
 // 2. Validates inputs
 // 3. Performs calculations using spread operator for function arguments
 // 4. Displays results
+const calculate = () => {
+  const values = {
+    bill: Number.parseFloat(billAmount.value),
+    tipPercent: Number.parseFloat(tipPercentage.value),
+    people: Number.parseFloat(numPeople.value),
+  };
+
+  const { bill, tipPercent, people } = values;
+
+  if (Number.isNaN(bill) ||Number.isNaN(tipPercent) || Number.isNaN(people) || bill <= 0 || tipPercent < 0 || people <= 0) {
+    alert("Please enter valid positive numbers");
+  }
+
+  const results = calculator.calculateAll(...Object.values(values));
+  const [ tip, total, perPerson ] = results;
+  console.log(results);
+
+  tipAmountSpan.textContent = tip.toFixed(2);
+  totalBillSpan.textContent = total.toFixed(2);
+  perPersonSpan.textContent = perPerson.toFixed(2);
+};
 
 // TODO: Add event listener to calculate button
+calculateBtn.addEventListener("click", calculate);
 
 // BONUS: Add real-time calculation on input change
 // BONUS: Add reset button
