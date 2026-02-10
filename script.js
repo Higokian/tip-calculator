@@ -10,6 +10,7 @@ const elements = {
   tipAmountSpan: getElement("tipAmount"),
   totalBillSpan: getElement("totalBill"),
   perPersonSpan: getElement("perPerson"),
+  resetBtn: getElement("resetBtn")
 };
 
 // Destructure elements for easier access
@@ -22,6 +23,7 @@ const {
   tipAmountSpan,
   totalBillSpan,
   perPersonSpan,
+  resetBtn
 } = elements;
 
 // Calculator object with methods for each calculation step
@@ -72,7 +74,7 @@ const calculate = () => {
   totalBillSpan.textContent = `$${total.toFixed(2)}`;
   perPersonSpan.textContent = `$${perPerson.toFixed(2)}`;
 
-  document.getElementById("results").classList.remove("hidden");
+  resultsDiv.classList.remove("hidden");
 };
 
 // TODO: Add event listener to calculate button
@@ -80,6 +82,20 @@ calculateBtn.addEventListener("click", calculate);
 
 // BONUS: Add real-time calculation on input change
 // BONUS: Add reset button
+const reset = () => {
+  billAmount.value = "";
+  tipPercentage.value = "15";
+  numPeople.value = "1";
+
+  // Hide results
+  resultsDiv.classList.add("hidden");
+
+  // Remove active class from tip buttons
+  tipButtons.forEach(btn => btn.classList.remove("active"));
+
+}
+
+resetBtn.addEventListener("click", reset);
 
 // BONUS: Add custom tip quick-select buttons (10%, 15%, 20%, 25%)
 
