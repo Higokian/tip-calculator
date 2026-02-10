@@ -25,6 +25,9 @@ A convenient tip calculator app that helps users determine how much they should 
 - **Calculate Tip Amount**: Calculate the amount to tip based on tip percentage
 - **Calculate Total Bill**: Calculate the total bill including the tip amount
 - **Calculate Amount Per Person**: Easily determine how much each person should pay
+- **Reset Button**: Starting over is as easy as clicking a button!
+- **Quick Buttons**: Click one of the quick percentage buttons to avoid having to type!
+- **Real-time Calculation**: App will update calculations as you enter values.
 
 ---
 
@@ -121,8 +124,9 @@ Building this project taught me:
 
 ## 🔮 Future Improvements
 
-- [ ] Quick tip buttons
-- [ ] Real-time calculation
+- [x] Quick tip buttons
+- [x] Real-time calculation
+- [x] Reset button
 - [ ] Save to localStorage
 
 ---
