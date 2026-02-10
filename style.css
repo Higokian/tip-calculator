@@ -124,6 +124,15 @@ button:active {
   transform: translateY(0);
 }
 
+.reset-btn {
+  background: #dc3545;
+  margin-top: 5px;
+}
+
+.reset-btn:hover {
+  background: #c82333;
+}
+
 .results {
   background: #f8f9fa;
   padding: 25px;
@@ -132,7 +141,7 @@ button:active {
 }
 
 .results.hidden {
-    display: none;
+  display: none;
 }
 
 .result-row {
