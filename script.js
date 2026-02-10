@@ -71,6 +71,8 @@ const calculate = () => {
   tipAmountSpan.textContent = `$${tip.toFixed(2)}`;
   totalBillSpan.textContent = `$${total.toFixed(2)}`;
   perPersonSpan.textContent = `$${perPerson.toFixed(2)}`;
+
+  document.getElementById("results").classList.remove("hidden");
 };
 
 // TODO: Add event listener to calculate button
