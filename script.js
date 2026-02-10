@@ -78,4 +78,26 @@ calculateBtn.addEventListener("click", calculate);
 
 // BONUS: Add real-time calculation on input change
 // BONUS: Add reset button
+
 // BONUS: Add custom tip quick-select buttons (10%, 15%, 20%, 25%)
+
+const tipButtons = document.querySelectorAll(".tip-btn");
+tipButtons.forEach(button => {
+  button.addEventListener("click", (event) => {
+    // Destructure the dataset from the clicked button
+    const {dataset: { tip }} = event.target;
+
+    // Update input
+    tipPercentage.value = tip;
+    console.log(`Selected tip: ${tip}%`);
+
+    // Remove active class from all buttons
+    tipButtons.forEach(btn => btn.classList.remove("active"));
+
+    // Add active class to clicked button
+    event.target.classList.add("active");
+
+    // Trigger calculation
+    calculate();
+  });
+});
