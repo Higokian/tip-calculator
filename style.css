@@ -62,8 +62,14 @@ input:focus {
   box-shadow: 0 0 0 3px rgba(42, 82, 152, 0.1);
 }
 
+.quick-tips {
+  margin: 10px 0;
+}
+
+
+
 button {
-  paddin: 16px;
+  padding: 16px;
   background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
   color: white;
   border: none;
