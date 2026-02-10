@@ -10,7 +10,7 @@ const elements = {
   tipAmountSpan: getElement("tipAmount"),
   totalBillSpan: getElement("totalBill"),
   perPersonSpan: getElement("perPerson"),
-  resetBtn: getElement("resetBtn")
+  resetBtn: getElement("resetBtn"),
 };
 
 // Destructure elements for easier access
@@ -23,7 +23,7 @@ const {
   tipAmountSpan,
   totalBillSpan,
   perPersonSpan,
-  resetBtn
+  resetBtn,
 } = elements;
 
 // Calculator object with methods for each calculation step
@@ -81,6 +81,19 @@ const calculate = () => {
 calculateBtn.addEventListener("click", calculate);
 
 // BONUS: Add real-time calculation on input change
+
+// Add input event listeners to all inputs
+const inputs = [billAmount, tipPercentage, numPeople];
+
+inputs.forEach((input) => {
+  input.addEventListener("input", () => {
+    // Only calculate if bill amount is entered
+    if (billAmount.value && billAmount.value > 0) {
+      calculate();
+    }
+  });
+});
+
 // BONUS: Add reset button
 const reset = () => {
   billAmount.value = "";
@@ -91,26 +104,27 @@ const reset = () => {
   resultsDiv.classList.add("hidden");
 
   // Remove active class from tip buttons
-  tipButtons.forEach(btn => btn.classList.remove("active"));
-
-}
+  tipButtons.forEach((btn) => btn.classList.remove("active"));
+};
 
 resetBtn.addEventListener("click", reset);
 
 // BONUS: Add custom tip quick-select buttons (10%, 15%, 20%, 25%)
 
 const tipButtons = document.querySelectorAll(".tip-btn");
-tipButtons.forEach(button => {
+tipButtons.forEach((button) => {
   button.addEventListener("click", (event) => {
     // Destructure the dataset from the clicked button
-    const {dataset: { tip }} = event.target;
+    const {
+      dataset: { tip },
+    } = event.target;
 
     // Update input
     tipPercentage.value = tip;
     console.log(`Selected tip: ${tip}%`);
 
     // Remove active class from all buttons
-    tipButtons.forEach(btn => btn.classList.remove("active"));
+    tipButtons.forEach((btn) => btn.classList.remove("active"));
 
     // Add active class to clicked button
     event.target.classList.add("active");
