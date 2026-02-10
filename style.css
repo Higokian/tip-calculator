@@ -62,11 +62,45 @@ input:focus {
   box-shadow: 0 0 0 3px rgba(42, 82, 152, 0.1);
 }
 
+/* Quick tips buttons*/
 .quick-tips {
   margin: 10px 0;
 }
 
+.quick-tips p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
 
+.tip-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.tip-btn {
+  padding: 10px;
+  background: white;
+  color: #2a5298;
+  border: 2px solid #2a5298;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.tip-btn:hover {
+  background: #2a5298;
+  color: white;
+}
+
+.tip-btn:active {
+  background: #2a5298;
+  color: white;
+}
+/*---------------------*/
 
 button {
   padding: 16px;
@@ -97,9 +131,9 @@ button:active {
   margin-top: 10px;
 }
 
-/*.results.hidden {
+.results.hidden {
     display: none;
-}*/
+}
 
 .result-row {
   display: flex;
